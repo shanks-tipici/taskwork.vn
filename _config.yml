@@ -3,7 +3,7 @@ baseurl:
 
 
 # Site settings
-title: Task work
+title: TaskWork
 email: contact@tipici.vn
 description: "Giải pháp quản lý công việc & dự án toàn diện cho doanh nghiệp giúp tăng hiệu suất gấp 3 lần. Quản lý công việc và dự án trở nên thật dễ dàng."
 
@@ -42,3 +42,4 @@ address:
 # Build settings
 markdown: kramdown
 permalink: pretty
+theme: jekyll-theme-cayman
