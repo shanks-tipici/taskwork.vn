@@ -1,0 +1,44 @@
+url: 
+baseurl: 
+
+
+# Site settings
+title: Task work
+email: contact@tipici.vn
+description: "Giải pháp quản lý công việc & dự án toàn diện cho doanh nghiệp giúp tăng hiệu suất gấp 3 lần. Quản lý công việc và dự án trở nên thật dễ dàng."
+
+
+# Team names, titles and social links
+people:
+- name: Nguyễn Hữu Vinh
+  pic: 1
+  position: giám đốc công ty CP TiPiCi
+  comment: "TaskWork đã giúp TiPiCi cải thiện chất lượng và hiệu quả công việc của đội ngũ kỹ thuật viên, từ đó nâng cao sự hài lòng của khách hàng và đặc biệt lượng khách hàng cũng tăng hơn 150% cùng kỳ sau khi áp dụng phần mềm. Toàn bộ cán bộ, nhân viên đều yêu thích và tích cực sử dụng vì phần mềm mang lại nhiều tiện ích, giải quyết mọi việc nhanh chóng ngay trên di động cá nhân.”"
+
+- name: Trần Văn Thạch
+  pic: 2
+  position: Giám đốc CTY TNHH TV XD DV TM TRẦN NGUYỄN
+  comment: "TaskWork cung cấp giải pháp quản lý công việc & dự án toàn diện cho doanh nghiệp giúp tăng hiệu suất gấp 3 lần."
+
+
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  # - title: twitter
+  #   url: http://twitter.com/jekyllrb
+  - title: facebook
+    url: https://www.facebook.com/TipiciJscVN
+  # - title: stack-overflow
+  #   url: http://stackoverflow.com/questions/tagged/jekyll
+  # - title: bitbucket 
+  #   url: http://bitbucket.org/jekyll
+  - title: github
+    url: https://github.com/TipiciJSC/
+
+# Postal address (add as many lines as necessary)
+address:
+  - line: 293 Bùi Thiện Ngộ, p.Hòa Xuân, q.Cẩm Lệ, tp.Đà Nẵng
+
+# Build settings
+markdown: kramdown
+permalink: pretty

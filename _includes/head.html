@@ -1,0 +1,65 @@
+<head>
+    <!-- <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <!-- <meta name="viewport" content="width=device-width">
+    <meta name="description" content="{{ site.description }}"> -->
+    {% include meta.html %}
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+
+    <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+
+    <!-- Custom Fonts -->
+    <!-- <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="/img/logos/favicon.ico">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="application/ld+json">
+        {"@context":"https://schema.org","@graph":[{"@type":["Organization","Place","LocalBusiness"],"@id":"https://tastwork.vn/#localbusiness","name":"tastwork.vn","url":"https://tastwork.vn/","sameAs":["https://www.facebook.com/tipicijsc/"],"logo":{"@type":"ImageObject","@id":"https://tastwork.vn/#logo","url":"https://tastwork.vn/img/logos/Taskwork.svg","caption":"tastwork.vn"},"image":"https://tastwork.vn/img/logos/Taskwork.svg","address":{"@type":"PostalAddress","streetAddress":"293 Bùi Thiện Ngộ, Phường Hòa Xuân, Cẩm Lệ","addressLocality":"Cẩm Lệ","addressRegion":"Đà Nẵng","postalCode":"550000","addressCountry":"VN"},"priceRange":"500.000₫ - 2.000.000₫","email":"contact@tipici.vn","telephone":"0919 88 2756"},{"@type":"WebSite","@id":"https://tastwork.vn/#website","url":"https://tastwork.vn/","name":"Phần mềm quản lý công việc","publisher":{"@id":"https://tastwork.vn/#publisher"}},{"@type":"ProfilePage","@id":"https://tastwork.vn/#profilepage","url":"https://tastwork.vn/","inLanguage":"vi","name":"Phần mềm quản lý công việc, dự án,...","isPartOf":{"@id":"https://tastwork.vn/#ispartof"}},{"@type":["Person"],"@id":"https://tastwork.vn/#author","name":"Kinh doanh","image":{"@type":"ImageObject","@id":"https://tastwork.vn/#authorlogo","url":"https://tastwork.vn/","caption":"Kinh doanh"},"sameAs":[]},{"@type":"Place","@id":"https://tastwork.vn/#local-place","address":{"@type":"PostalAddress","@id":"https://tastwork.vn/#local-place-address","streetAddress":"293 Bùi Thiện Ngộ, Phường Hòa Xuân, Cẩm Lệ, Đà Nẵng","addressLocality":"Đà Nẵng","postalCode":"550000","addressRegion":"Đà Nẵng","addressCountry":""},"geo":{"@type":"GeoCoordinates","latitude":"16.0068501","longitude":"108.2220927"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"08:30","closes":"17:30"}],"telephone":"0919 88 2756"}]}
+      </script>
+      {% if page.title %}
+      {% if page.categories %}
+      <script type="application/ld+json">
+        {"@context":"https://schema.org/","@type":"BreadcrumbList","@id":"https://tastwork.vn/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"{{ page.url }}#category","url":"https://tastwork.vn{{ page.url }}","name":"{{ page.categories | join: ', ' }}"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"{{ page.url }}","url":"https://tastwork.vn{{ page.url }}","name":"{{ page.title }}"}}]}
+      </script>
+      {% else %}
+      <script type="application/ld+json">
+        {"@context":"https://schema.org/","@type":"BreadcrumbList","@id":"https://tastwork.vn/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"{{ page.url }}","url":"https://tastwork.vn{{ page.url }}","name":"{{ page.title }}"}}]}
+      </script>
+      {% endif %}
+      {% else %}
+      <script type="application/ld+json">
+        {"@context": "https://schema.org/","@type":"BreadcrumbList","@id":"https://tastwork.vn/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://tastwork.vn/#breadcrumlist1","url":"https://tastwork.vn/","name":"Chuyên website, app, iot"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://tastwork.vn/about/#breadcrumlist2","url":"https://tastwork.vn/about","name":"Giới thiệu"}}]}
+      </script>
+      {% endif %}
+    <!-- Load Facebook SDK for JavaScript -->
+    <div id="fb-root"></div>
+    <script>
+        window.fbAsyncInit = function () {
+            FB.init({
+                xfbml: true,
+                version: 'v3.2'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+</head>
