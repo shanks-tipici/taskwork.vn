@@ -14,10 +14,12 @@
                 </div>
                 <div class="col-md-4">
                     <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
+                        {% for post in site.posts %}
+                        <li>
+                            <a href="#featuresModal{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+                                {{ post.description }}
+                            </a>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

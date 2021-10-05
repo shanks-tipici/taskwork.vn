@@ -10,31 +10,24 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
+                    <div class="col-lg-12">
                         <div class="modal-body">
                             <h2>{{ post.title }}</h2>
                             <hr class="star-primary">
-                            <embed src="img/features/{{ post.img }}" alt="{{ post.alt }}"/>
+                            <!-- <embed src="img/features/{{ post.img }}" alt="{{ post.alt }}"/> -->
                             <!-- <img src="img/features/{{ post.img }}" class="img-responsive img-centered" alt="{{ post.alt }}"> -->
-                            <p>{{ post.description }}</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">{{ post.client }}</a>
-                                    </strong>
-                                </li>
+                            <p>{{ post.content }}</p>
+                            <!-- <ul class="list-inline item-details">
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">{{ post.project-date }}</a>
+                                    <strong><a href="http://startbootstrap.com">{{ post.date }}</a>
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">{{ post.category }}</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </ul> -->
                         </div>
+                        
                     </div>
                 </div>
+                <div class="row" style="display: flex; justify-content: center;"><button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button></div>
             </div>
         </div>
     </div>
